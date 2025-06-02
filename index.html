@@ -13,7 +13,20 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
+
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
     .card {
       background-color: rgb(255, 255, 255);
       border-radius: 20px;
@@ -21,31 +34,24 @@
       padding: 30px;
       max-width: 400px;
       text-align: center;
+      animation: floating 4s ease-in-out infinite;
     }
+
     h1 {
       color: #6c3483;
+      animation: pulse 2s infinite;
     }
+
     p {
       font-size: 18px;
       color: #333;
     }
+
     img {
       width: 100%;
       border-radius: 20px;
       margin-top: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-    li {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    li::before {
-      content: "✨ ";
-      color: #f39c12;
+      animation: pulse 3s ease-in-out infinite;
     }
   </style>
 </head>
@@ -53,12 +59,13 @@
   <div class="card">
     <h1>Selamat malam sayangkuu 🌙</h1>
     <p>Selamat tidur yang nyenyak yaa, semoga mimpi indah 💖</p>
-    
-    <img src="e/pemrograman HTML/gambar.jpg" alt="cinta">
-    
-    <h2> love </h2>
-<img src="gambar.jpg" alt="cinta" width="500">
-   
+    <img src="gambar.jpg" alt="cinta">
   </div>
+
+  <!-- 🎵 Musik otomatis -->
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio 🙁
+  </audio>
 </body>
 </html>
